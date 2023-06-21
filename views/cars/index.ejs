@@ -1,0 +1,8 @@
+<%- include('../partials/header') %>
+
+<h2>Cars:</h2>
+<% for(let i = 0; i < cars.length; i++){%>
+        <li><%=cars[i].make%></li>
+    <%} %>
+
+<%- include('../partials/footer') %>
