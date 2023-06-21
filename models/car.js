@@ -1,18 +1,16 @@
 const mongoose = require('mongoose');
 
+const currentYear = new Date().getFullYear() + 1;
+
 const carSchema = new mongoose.Schema(
   {
     make: { type: String, required: true },
     model: String,
-    // year: {
-    //   type: Number,
-    //   // min: 1886,
-    //   // max: {
-    //   //   function() {
-    //   //     return new Date().getFullYear() + 1;
-    //   //   },
-    //   // },
-    // },
+    releaseYear: {
+      type: Number,
+      min: 1886,
+      max: currentYear,
+    },
     color: String,
   },
   {
