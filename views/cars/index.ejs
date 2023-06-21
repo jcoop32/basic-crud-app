@@ -1,8 +1,40 @@
 <%- include('../partials/header') %>
 
 <h2>Cars:</h2>
-<% for(let i = 0; i < cars.length; i++){%>
-        <li><%=cars[i].make%></li>
-    <%} %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Color</th>
+            <th>Edit</th>
+            <th>Delete</th>
+   
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let i = 0; i < cars.length; i++){%>
+            <tr>
+                <td><%= cars[i].make %></td>
+                <td><%= cars[i].model %></td>
+                <td><%= cars[i].releaseYear %></td>
+                <td><%= cars[i].color %></td>
+                <td><a href="/cars/<%=cars[i]._id%>/edit">edit</a></td>
+                <td><a href="/cars/<%=cars[i]._id%>">delete</a></td>
+            </tr>
+        <%} %>
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
 
 <%- include('../partials/footer') %>
