@@ -9,8 +9,8 @@
             <th>Model</th>
             <th>Year</th>
             <th>Color</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <!-- <th>Edit</th>
+            <th>Delete</th> -->
    
         </tr>
     </thead>
@@ -21,8 +21,15 @@
                 <td><%= cars[i].model %></td>
                 <td><%= cars[i].releaseYear %></td>
                 <td><%= cars[i].color %></td>
-                <td><a href="/cars/<%=cars[i]._id%>/edit">edit</a></td>
-                <td><a href="/cars/<%=cars[i]._id%>">delete</a></td>
+                <td>
+                    <a href="/cars/<%=cars[i]._id%>/edit">
+                        <input type="image" src="/images/pencil-square.svg"></input>                    </a>
+                </td>
+                <td>
+                    <form action="/cars/<%=cars[i]._id%>?_method=DELETE" method='POST'>
+                           <input type="image" src="/images/trash3 (1).svg"></input>
+                    </form>
+                </td>
             </tr>
         <%} %>
 

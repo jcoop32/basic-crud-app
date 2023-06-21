@@ -6,6 +6,7 @@ module.exports = {
   create,
   edit,
   update,
+  delete: deleteCar,
 };
 
 async function update(req, res) {
@@ -53,5 +54,14 @@ async function index(req, res) {
     });
   } catch (err) {
     console.log(err);
+  }
+}
+
+async function deleteCar(req, res) {
+  try {
+    await Cars.findByIdAndRemove(req.params.id);
+    res.redirect('/cars');
+  } catch (err) {
+    res.render('/cars', { errorMsg: err.message });
   }
 }

@@ -2,23 +2,25 @@
 
 <h2>Add New Car:</h2>
 <form action="/cars" method="POST">
-    <label>Make: 
-        <input type="text" name="make">
-    </label>
-    <br/>
-    <label>Model: 
-        <input type="text" name="model">
-    </label>
-    <br/>
-    <label>Year: 
-        <input type="number" name="releaseYear">
-    </label>
-    <br/>
-    <label>Color: 
-        <input type="text" name="color">
-    </label>
-    <br/>
-    <button type="submit">Add Car</button>
+    <div class="formContainer">  
+        <label>Make: 
+            <input class="newForm" type="text" name="make">
+        </label>
+        <br/><br/>
+        <label>Model: 
+            <input class="newForm" type="text" name="model">
+        </label>
+        <br/><br/>
+        <label>Year: 
+            <input class="newForm" type="number" name="releaseYear">
+        </label>
+        <br/><br/>
+        <label>Color: 
+            <input class="newForm" type="text" name="color">
+        </label>
+    </div> 
+        <br/><br/>
+        <button type="submit">Add Car</button>
 </form>
 
 
