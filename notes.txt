@@ -1,0 +1,8 @@
+-index
+table
+-create
+-form page
+-update
+edit button for each object
+delete
+-button

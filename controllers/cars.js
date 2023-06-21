@@ -2,6 +2,7 @@ const Cars = require('../models/car');
 
 module.exports = {
   index,
+  new: newCar,
 };
 
 async function index(req, res) {
@@ -14,4 +15,10 @@ async function index(req, res) {
   } catch (err) {
     console.log(err);
   }
+}
+
+function newCar(req, res) {
+  res.render('cars/new', {
+    title: 'New car',
+  });
 }
